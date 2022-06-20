@@ -48,7 +48,7 @@ export default function initCarregarPato() {
     }
 
     async function carregarPato() {
-        const fetchRequest = fetch('http://localhost:4000/api/random');
+        const fetchRequest = fetch('https://pato-api-proxy.herokuapp.com/api/random');
         spinner.classList.toggle('ativo');
         const patoJson = await (await fetchRequest).json();
         imagemPato.src = patoJson.url
