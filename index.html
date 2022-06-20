@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./icons/duck-logo.svg" type="image/svg+xml">
+
+  <title>Patos Aleatórios</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@700&family=Work+Sans:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="./index.html" class="titulo-logo">
+        <img src="./icons/duck-logo.svg" alt="Ícone de pato" width="36px" height="36px">
+        <h1>Patos Aleatórios</h1>
+      </a>
+      <img src="./icons/info-icon.svg" alt="Ícone mais informações" width="34px" height="34px" class="info-icon">
+    </nav>
+  </header>
+
+  <button class="botao-refresh">Carregar um pato aleatório <img class="spinner" src="./icons/refresh-icon.svg"></button>
+
+  <section class="pato-container">
+    <img src="./icons/grey-duck-decorator.svg" class="duck-decorator">
+    <img src="" class="duck-image">
+  </section>
+
+  <a href="" class="download-button" download="Pato" target="_blank">Download <img src="./icons/download-icon.svg"></a>
+
+  <section class="modal-container">
+    <div class="modal" data-js>
+      <img src="./icons/fechar-icon.svg" class="fechar-icon">
+      <h3 class="titulo-modal" data-js>Mais informações</h3>
+      <p data-js>Esse foi site foi feito utilizando a API Random-d.uk (<a href="https://random-d.uk/" target="_blank" data-js>https://random-d.uk/</a>).</p>
+      <p data-js>Tecnologias utilizadas:</p>
+      <ul data-js>
+        <li data-js>Front-end: <span data-js>HTML, CSS, JavaScript</span></li>
+        <li data-js>Prototipação: <span data-js>Figma.</span></li>
+      </ul>
+      <img class="modal-decorator" src="./icons/grey-duck-decorator.svg" data-js>
+    </div>
+  </section>
+
+  <script type="module" src="./js/modules.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+.download-button {
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    background-color: #FFE03D;
+    border: 1px solid #FFDB1F;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    color: #463B00;
+    align-items: center;
+    padding: 8px 13px;
+    max-width: max-content;
+    gap: 10px;
+    border-radius: 5px;
+
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.125rem;
+
+    display: none;
+    cursor: pointer;
+}
+
+.download-button.ativo {
+    display: flex;
+}
+
+.download-button.animacao-mobile {
+    animation-duration: 0.3s;
+    animation-name: mobileTouch;
+    animation-direction: reverse;
+    
+}
+
+@keyframes mobileTouch {
+    0% {
+        background-color: #FFE03D;
+        border: 1px solid #FFDB1F;
+    }
+
+    100% {
+        background-color: #F6D10E;
+        border: 1px solid #EDC700;
+    }
+}
+
+@media (pointer: fine) {
+    .download-button {
+        transition: 200ms;
+    }
+
+    .download-button:hover {
+        background-color: #F6D10E;
+        border: 1px solid #EDC700;
+    }
+}

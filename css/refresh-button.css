@@ -1,0 +1,103 @@
+.botao-refresh {
+    margin: 0 auto;
+    margin-top: 70px;
+    color: #FAFAFA;
+    background-color: #292929;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.10);
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.125rem;
+    padding: 9px 18px;
+    border-radius: 5px;
+    
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: none;
+    border: 1px solid #212121;
+    cursor: pointer;
+    margin-bottom: 45px;
+}
+
+.botao-refresh .spinner.ativo {
+    animation-name: spin;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    transform-origin: 50% 50%;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* pointer: fine = pc */
+@media (pointer: fine) {
+    .botao-refresh {
+        transition: 200ms;
+    }
+
+    .botao-refresh:hover {
+        color: #D3D3D3;
+    }
+
+    .botao-refresh:hover img {
+        filter: brightness(0) saturate(100%) invert(98%) sepia(3%) saturate(612%) hue-rotate(240deg) brightness(106%) contrast(65%);
+    }
+}
+
+.botao-refresh.animacao-mobile p{
+    filter: brightness(0) saturate(100%) invert(98%) sepia(3%) saturate(612%) hue-rotate(240deg) brightness(106%) contrast(65%);
+}
+
+.botao-refresh.animacao-mobile {
+    animation-duration: 0.3s;
+    animation-name: mobileTouchText;
+    /* animation-timing-function: ease-in; */
+    animation-direction: reverse;
+}
+
+.botao-refresh.animacao-mobile img {
+    animation-duration: 0.3s;
+    animation-name: mobileTouchImg;
+    /* animation-timing-function: ease-in; */
+    animation-direction: reverse;
+}
+
+@keyframes mobileTouchImg {
+    0% {
+    }
+
+    100% {
+        filter: brightness(0) saturate(100%) invert(98%) sepia(3%) saturate(612%) hue-rotate(240deg) brightness(106%) contrast(65%);
+    }
+}
+
+@keyframes mobileTouchText {
+    0% {
+        color: #FAFAFA;
+    }
+
+    100% {
+        color: #D3D3D3;
+    }
+}
+
+
+/* pointer: coarse = touch
+@media (pointer: coarse) {
+}
+*/
+
+@media (max-width: 850px) {
+    .botao-refresh {
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+}
