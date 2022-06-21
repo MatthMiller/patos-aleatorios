@@ -8,10 +8,10 @@ export default function initCarregarPato() {
     let urlDownload;
 
     async function primeiroLoad() {
-        const fetchRequest = fetch('https://pato-api-proxy.herokuapp.com/api/random');
+        const fetchRequest = await fetch('https://pato-api-proxy.herokuapp.com/api/random');
         
         spinner.classList.toggle('ativo');
-        const patoJson = await (await fetchRequest).json();
+        const patoJson = await fetchRequest.json();
 
         urlDownload = patoJson.url;
         imagemPato.src = patoJson.url;
@@ -48,9 +48,9 @@ export default function initCarregarPato() {
     }
 
     async function carregarPato() {
-        const fetchRequest = fetch('https://pato-api-proxy.herokuapp.com/api/random');
+        const fetchRequest = await fetch('https://pato-api-proxy.herokuapp.com/api/random');
         spinner.classList.toggle('ativo');
-        const patoJson = await (await fetchRequest).json();
+        const patoJson = await fetchRequest.json();
         imagemPato.src = patoJson.url
         urlDownload = patoJson.url;
         setDownloadUrl();
